@@ -52,7 +52,7 @@ RUN apt-get update > /dev/null && \
 
 
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
-ENV VROOM_DOCKER=ors \
+ENV VROOM_DOCKER=valhalla \
     VROOM_LOG=/conf
 
 HEALTHCHECK --start-period=10s CMD curl --fail -s http://localhost:3000/health || exit 1
